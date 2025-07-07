@@ -123,11 +123,3 @@ class DataTransformation:
         except Exception as e:
             raise CustomException(e,sys)
 
-
-if __name__ == "__main__":
-    dt = DataTransformation()
-    train_arr, test_arr, preprocessor_path = dt.initiate_data_transformation("artifacts/train.csv", "artifacts/test.csv")
-    print("Transformation Success!")
-    print("Train array shape:", train_arr.shape)
-    print("Test array shape:", test_arr.shape)
-    print("Preprocessor saved at:", preprocessor_path)
